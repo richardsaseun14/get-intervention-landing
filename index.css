@@ -1,0 +1,183 @@
+/* CSS Styles
+Author: Richard Saseun
+github: https://github.com/richardsaseun14
+date created: 24/08/2022 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.bg-green {
+	background-color: #194d44;
+}
+
+.bg-green-50 {
+	background: linear-gradient(180deg, #194d41 0%, rgba(25, 77, 65, 0.254) 100%);
+}
+
+.text-green {
+	color: #194d44;
+}
+
+.bg-green-light {
+	background-color: #5bc8af;
+}
+
+.text-green-light {
+	color: #5bc8af;
+}
+
+.nav-link.active {
+	text-decoration: underline;
+}
+
+.nav-link:hover {
+	text-decoration: underline;
+}
+
+.navbar-toggler.custom-toggler {
+	border-color: transparent;
+}
+
+.bg-hero {
+	background-image: url('./images/hero-bg.png');
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 100px 0 200px 0;
+}
+
+.heading-1 {
+	font-weight: 900;
+}
+
+.stroke-it {
+	/* -webkit-text-stroke: 2px red; */
+	color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: white;
+}
+
+.fs-14 {
+	font-size: 14px;
+}
+
+.input-material {
+	position: relative;
+}
+
+.form-hero {
+	background: linear-gradient(180deg, #2a7d6c 0%, rgba(62, 105, 96, 0.62) 100%);
+	box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.12);
+	border-radius: 12px;
+	padding: 40px 20px;
+	margin: 0 24px;
+}
+
+.hero-title {
+	font-weight: 700;
+	font-size: 2em;
+}
+
+.btn-hero {
+	padding: 12px 54px;
+	background-color: #5bc8af;
+	color: white;
+	font-weight: 500;
+}
+
+.btn-hero:hover {
+	background-color: #5bc8af;
+	color: white;
+	animation: pulse;
+	animation-duration: 2s;
+}
+
+/* ******************** */
+/* * MEDIA QUERIES * */
+/* ******************** */
+@media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+}
+
+@media only screen and (min-width: 768px) {
+	/* For Tab and Desktop: */
+	.hero-title {
+		font-size: 3em;
+	}
+	.form-hero {
+		padding: 60px 20px;
+		margin: 0 64px;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	/* For  Desktop: */
+	.hero-title {
+		font-size: 3.6em;
+	}
+
+	.form-hero {
+		padding: 60px 20px;
+		margin: 0 16px;
+		background: none;
+		box-shadow: none;
+	}
+
+	.bg-hero {
+		padding: 150px 0 150px 0;
+	}
+}
+
+/* ******************** */
+/* * INPUT WITH FLOATING LABEL * */
+/* ******************** */
+label {
+	position: absolute;
+	font-size: 1rem;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	color: white;
+	padding: 0 1rem;
+	margin: 0 0.5rem;
+	transition: 0.1s ease-out;
+	transform-origin: left top;
+	pointer-events: none;
+}
+
+input {
+	font-size: 1rem;
+	outline: none;
+	border: 1px solid white;
+	background-color: rgba(255, 255, 255, 0.098);
+	border-radius: 2px;
+	padding: 1rem 0.7rem;
+	color: white;
+	transition: 0.1s ease-out;
+}
+
+input:focus {
+	border-color: white;
+}
+
+input:focus + label {
+	color: white;
+	top: 0;
+	/* padding: 0; */
+	/* background-color: rgba(255, 255, 255, 0.247); */
+	/* margin: 0 5px 0; */
+	transform: translateY(-50%) scale(0.9) !important;
+}
+
+input:not(:placeholder-shown) + label {
+	top: 0;
+	transform: translateY(-50%) scale(0.9) !important;
+}
+
+input:not(:focus)::placeholder {
+	opacity: 0;
+}

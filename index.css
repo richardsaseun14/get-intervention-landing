@@ -4,7 +4,7 @@ github: https://github.com/richardsaseun14
 date created: 24/08/2022 
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap'); */
 
 body {
 	font-family: 'Montserrat', sans-serif;
@@ -12,6 +12,15 @@ body {
 
 .bg-green {
 	background-color: #194d44;
+}
+
+.bg-home {
+	background-color: #f5f5f5;
+	margin-top: -1px;
+}
+
+.image-section {
+	padding: 50px 0;
 }
 
 .bg-green-50 {
@@ -54,6 +63,28 @@ body {
 	font-weight: 900;
 }
 
+.text-stroke {
+	color: transparent;
+	-webkit-text-stroke-width: 2px;
+}
+
+.text-stroke-white {
+	-webkit-text-stroke-color: #fff;
+}
+
+.text-stroke-black {
+	-webkit-text-stroke-color: #000;
+}
+
+/* .text-stroke::after {
+	content: attr(data-text);
+	position: absolute;
+	left: 0;
+	-webkit-text-stroke: 0;
+	color: #5bc8ae46;
+	pointer-events: none;
+} */
+
 .stroke-it {
 	/* -webkit-text-stroke: 2px red; */
 	color: transparent;
@@ -89,9 +120,26 @@ body {
 	font-weight: 500;
 }
 
+.btn-hero-outline {
+	padding: 12px 54px;
+	border: 1px solid #5bc8af;
+	background-color: transparent;
+	color: #5bc8af;
+	font-weight: 500;
+}
+
 .btn-hero:hover {
 	background-color: #5bc8af;
 	color: white;
+}
+
+.btn-hero-outline:hover {
+	/* background-color: #5bc8af; */
+	color: #5bc8af;
+}
+
+.btn-hero:hover,
+.btn-hero-outline:hover {
 	animation: pulse;
 	animation-duration: 2s;
 }

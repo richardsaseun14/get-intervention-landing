@@ -14,6 +14,11 @@
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+	<link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+	<!-- Add the new slick-theme.css if you want the default styling -->
+	<link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
+
 	<link rel="stylesheet" href="index.css" type="text/css">
 
 
@@ -28,9 +33,9 @@
 <body>
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-md navbar-dark bg-green-50 position-absolute w-100">
-		<div class="container">
+		<div class="container py-3">
 			<a class="navbar-brand align-self-start" href="#">
-				<img src="./images/logo-white.svg" alt="" height="30">
+				<img src="./images/logo-white.svg" alt="" height="35">
 			</a>
 			<button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,13 +44,13 @@
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ms-auto text-uppercase flex-wrap justify-content-end">
 					<li class="nav-item">
-						<a class="nav-link active text-light px-xl-4" aria-current="page" href="#">Home</a>
+						<a class="nav-link active text-light px-xl-2" aria-current="page" href="#">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-light px-xl-4" href="#">about</a>
+						<a class="nav-link text-light px-xl-2" href="#">about</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-light px-xl-4" href="#">contact</a>
+						<a class="nav-link text-light px-xl-2" href="#">contact</a>
 					</li>
 					<span class="d-none d-lg-block navbar-text text-light mx-4">
 						|
@@ -63,7 +68,7 @@
 	<div class="bg-hero">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-12 col-lg-6">
+				<div class="col-12 col-lg-6 col-xl-7">
 					<h1 class="hero-title text-uppercase text-center text-lg-start heading-1 text-light text-wrap mt-4"><span
 							class="text-stroke text-stroke-white">Get
 							an</span> <br>
@@ -76,36 +81,68 @@
 				</div>
 
 				<!-- Form -->
-				<div class="col form-hero">
-					<form class="row g-3" novalidate>
+				<div class="col form-hero mt-lg-4">
+					<form class="row g-3 needs-validation" novalidate action="success.html">
 						<h3 class="fs-4 text-center text-light fw-bold mb-3">Contact Us</h3>
 						<div class="col-md-6 input-material">
-							<input placeholder="firstname" type="text" class="w-100" />
+							<input placeholder="Fisrt Name" type="text" class="w-100" required />
 							<label> First Name</label>
+							<div class="invalid-tooltip">
+								This field can’t be empty. Please fill it in.
+							</div>
 						</div>
 						<div class="col-md-6 input-material">
-							<input placeholder="lastname" type="text" class="w-100" />
+							<input placeholder="Last Name" type="text" class="w-100" required />
 							<label> Last Name</label>
+							<div class="invalid-tooltip">
+								This field can’t be empty. Please fill it in.
+							</div>
 						</div>
 						<div class="col-md-6 input-material">
-							<input placeholder="firstname" type="text" class="w-100" />
-							<label> First Name</label>
+							<input placeholder="Business Email" type="email" class="w-100" required />
+							<label> Business Email</label>
+							<div class="invalid-tooltip">
+								This field can’t be empty. Please fill it in.
+							</div>
 						</div>
 						<div class="col-md-6 input-material">
-							<input placeholder="lastname" type="text" class="w-100" />
-							<label> Last Name</label>
+							<input placeholder="company" type="text" class="w-100" required />
+							<label> Company</label>
+							<div class="invalid-tooltip">
+								This field can’t be empty. Please fill it in.
+							</div>
 						</div>
 						<div class="col-md-12 input-material">
-							<input placeholder="firstname" type="text" class="w-100" />
-							<label> First Name</label>
+							<select class="w-100">
+								<!-- <option selected></option> -->
+								<option value="1">Nigeria</option>
+								<option value="2">USA</option>
+								<option value="3">Canada</option>
+								<option value="3">Australia</option>
+								<option value="3">Brazil</option>
+								<option value="3">South Africa</option>
+								<option value="3">Ghana</option>
+								<option value="3">Kenya</option>
+								<option value="3">China</option>
+								<option value="3">Chile</option>
+								<option value="3">Mexico</option>
+								<option value="3">England</option>
+								<option value="3">Netherland</option>
+								<option value="3">India</option>
+								<option value="3">South Korea</option>
+							</select>
+							<label>Country</label>
+							<!-- <div class="invalid-tooltip">
+								This field can’t be empty. Please fill it in.
+							</div> -->
 						</div>
 
-						<div class="col-12 text-center">
-							<button type="submit" class="btn btn-hero"><span class="mdi mdi-send me-2"></span>Submit</button>
+						<div class="col-12 col-md-6 text-center mx-auto">
+							<button type="submit" class="btn btn-hero mt-3 w-100"><span
+									class="mdi mdi-send me-2"></span>Submit</button>
 						</div>
 					</form>
 				</div>
-
 				<!-- END Form -->
 			</div>
 		</div>
@@ -125,11 +162,13 @@
 	<!-- END Image Row -->
 
 	<!-- Information Section -->
-	<div class="bg-home pt-4">
+	<div class="bg-home pt-4 info-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 mb-3">
-					<h1 class="text-uppercase fw-bold"><span class="text-stroke text-stroke-black">WE</span> UNDERstand</h1>
+					<h1 class="title-section text-uppercase fw-bold"><span class="text-stroke text-stroke-black">WE</span>
+						UNDERstand
+					</h1>
 				</div>
 				<div class="col-12 col-md-6 col-lg-4 mb-2">
 					<p class="">Older adults want to play active and meaningful roles in their lives, including as part of a
@@ -171,40 +210,70 @@
 
 	<!-- Testimonial Slider -->
 	<div class="container">
-		<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-			<!-- indicators -->
-			<div class="carousel-indicators">
-				<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-					aria-current="true" aria-label="Slide 1"></button>
-				<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-				<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-			</div>
-			<!-- content -->
-			<div class="carousel-inner">
-				<div class="carousel-item active" data-bs-interval="10000">
-					<img src="./images/hero-bg.png" class="d-block w-100" alt="...">
-					<div class="carousel-caption">
-						<h5>First slide label</h5>
-						<p>Some representative placeholder content for the first slide.</p>
+		<div class="row testimonials">
+			<!-- slide-1 -->
+			<div class="col-12 px-md-3 px-lg-4">
+				<div class="row">
+					<div class="col-12 col-md-4 col-lg-3 slider-image">
+						<img class="img-fluid" src="./images/testimonial-image.jpg" alt="">
 					</div>
-				</div>
-				<div class="carousel-item" data-bs-interval="2000">
-					<img src="..." class="d-block w-100" alt="...">
-					<div class="carousel-caption d-none d-md-block">
-						<h5>Second slide label</h5>
-						<p>Some representative placeholder content for the second slide.</p>
+					<div
+						class="col-12 col-md-8 col-lg-9 bg-green rounded-3 text-white slider-info d-flex flex-column justify-content-end position-relative">
+						<img class="slider-quote" src="./images/quote.png" alt="">
+						<h5 class="fw-bold">Abbie Harvey </h5>
+						<p class="mb-0 fst-italic slider-info-text">I have been caring for my mom & dad off and on for about 10
+							years now, and I
+							know
+							the
+							importance
+							of
+							me being
+							there for appointments. Older people need attention, love and care that they truly deserve.</p>
 					</div>
 				</div>
 			</div>
-			<!-- carousel navigation -->
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
+			<!-- slide 2 -->
+			<div class="col-12 px-md-3 px-lg-4">
+				<div class="row">
+					<div class="col-12 col-md-4 col-lg-3 slider-image">
+						<img class="img-fluid" src="./images/testimonial-image.jpg" alt="">
+					</div>
+					<div
+						class="col-12 col-md-8 col-lg-9 bg-green rounded-3 text-white slider-info d-flex flex-column justify-content-end position-relative">
+						<img class="slider-quote" src="./images/quote.png" alt="">
+						<h5 class="fw-bold">Abbie Harvey </h5>
+						<p class="mb-0 fst-italic slider-info-text">I have been caring for my mom & dad off and on for about 10
+							years now, and I
+							know
+							the
+							importance
+							of
+							me being
+							there for appointments. Older people need attention, love and care that they truly deserve.</p>
+					</div>
+				</div>
+			</div>
+			<!-- slide 3 -->
+			<div class="col-12 px-md-3 px-lg-4">
+				<div class="row">
+					<div class="col-12 col-md-4 col-lg-3 slider-image">
+						<img class="img-fluid" src="./images/testimonial-image.jpg" alt="">
+					</div>
+					<div
+						class="col-12 col-md-8 col-lg-9 bg-green rounded-3 text-white slider-info d-flex flex-column justify-content-end position-relative">
+						<img class="slider-quote" src="./images/quote.png" alt="">
+						<h5 class="fw-bold">Abbie Harvey </h5>
+						<p class="mb-0 fst-italic slider-info-text">I have been caring for my mom & dad off and on for about 10
+							years now, and I
+							know
+							the
+							importance
+							of
+							me being
+							there for appointments. Older people need attention, love and care that they truly deserve.</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- END Testimonial Slider -->
@@ -213,7 +282,9 @@
 	<div class="container organize-section">
 		<div class="row">
 			<div class="col-12 mb-4">
-				<h1 class="text-uppercase fw-bold"><span class="text-stroke text-stroke-black">WE</span> CAN ORGANIZE EVERYTHING
+				<h1 class="title-section text-uppercase fw-bold"><span class="text-stroke text-stroke-black">WE</span> CAN
+					ORGANIZE
+					EVERYTHING
 				</h1>
 			</div>
 			<div class="col-12 col-lg-4 mb-3">
@@ -295,7 +366,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12 md:text-center text-white mb-3">
-					<h1 class="text-uppercase fw-bold"><span class="text-stroke text-stroke-white">Watch</span> the video
+					<h1 class="title-section text-uppercase fw-bold"><span class="text-stroke text-stroke-white">Watch</span> the
+						video
 					</h1>
 				</div>
 				<div class="col-12 col-lg-6">
@@ -336,7 +408,7 @@
 			<img class="d-lg-none image-video" src="./images/video-bg-mobile.png" alt="">
 			<img class="d-none d-lg-block image-video" src="./images/video-bg-desktop.png" alt="">
 
-			<img class="btn-play" src="./images/btn-play.png" alt="">
+			<img data-bs-toggle="modal" data-bs-target="#videoModal" class="btn-play" src="./images/btn-play.png" alt="">
 			<img class="img-video-logo" src="./images/logo-intervention.png" alt="">
 		</div>
 	</div>
@@ -345,15 +417,16 @@
 	<!-- Footer Section -->
 	<footer class="footer py-4">
 		<div class="container">
-			<div class="row">
+			<div class="row align-items-center">
 				<p class="col-12 col-lg-6 mb-0 text-center text-lg-start">@ 2021 Get an Intervention Inc. All rights reserved.
 				</p>
-				<ul class="col-12 col-lg-6 footer-list gap-3 justify-content-center mt-3 mt-lg-0 mb-0">
-					<li>Privacy Policy </li>
-					<li>|</li>
-					<li>Terms of use</li>
-					<li>|</li>
-					<li>Site Map</li>
+				<ul
+					class="col-12 col-lg-6 footer-list gap-3 justify-content-center justify-lg-content-end mt-1 mt-lg-0 mb-0 navbar-nav ms-auto">
+					<li class="nav-item"><a href="" class="nav-link footer-link">Privacy Policy</a> </li>
+					<li class="nav-text">|</li>
+					<li class="nav-item"><a href="" class="nav-link footer-link">Terms of use</a></li>
+					<li class="nav-text">|</li>
+					<li class="nav-item"><a href="" class="nav-link footer-link">Site Map</a></li>
 				</ul>
 			</div>
 
@@ -362,14 +435,73 @@
 	</footer>
 	<!-- END Footer Section -->
 
+	<!-- Modal -->
+	<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-fullscreen">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="exampleModalLabel">Video</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/1z0bhcTHOMQ?rel=0&amp;autoplay=1&mute=1"
+						title="The Most Dramatic Moments from the Natural World | BBC Earth" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- Bootstrap Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+	</script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
 	</script>
+	<script type="text/javascript" src="./slick/slick.min.js"></script>
 
 	<script>
 		const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 		const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+		const forms = document.querySelectorAll('.needs-validation')
+
+		// Loop over them and prevent submission
+		Array.from(forms).forEach(form => {
+			form.addEventListener('submit', event => {
+				if (!form.checkValidity()) {
+					console.log('hreere')
+					event.preventDefault()
+					event.stopPropagation()
+				}
+
+				form.classList.add('was-validated')
+			}, false)
+		})
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.testimonials').slick({
+				dots: true,
+				infinite: true,
+				// variableWidth: true,
+				// centerPadding: '0px',
+				// fade: true,
+				prevArrow: "<button class='slick-prev pull-left slick-arrows'><span class='mdi mdi-chevron-left mdi-24px'></span></button>",
+				nextArrow: "<button class='slick-next pull-right slick-arrows'><span class='mdi mdi-chevron-right mdi-24px'></span></button>",
+				arrows: true,
+				responsive: [{
+					breakpoint: 768,
+					settings: {
+						arrows: false,
+
+					}
+				}]
+			});
+		});
 	</script>
 </body>
 
